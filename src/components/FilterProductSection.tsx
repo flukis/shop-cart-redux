@@ -23,6 +23,7 @@ function FilterProductSection() {
   };
   useEffect(() => {
     dispatch(SetFilteredProduct(filter));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filter]);
   return (
     <div className="section-header">

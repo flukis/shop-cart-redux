@@ -91,12 +91,13 @@ export const productReducer = (
       return {
         ...state,
         filteredProducts: [
-          ...state.products.filter((item) => {
+          ...state.products.filter((item: productTypes) => {
             let setTrue: boolean = false;
             action.payload.forEach((itemb) => {
               if (itemb.type === item.type) setTrue = true;
             });
             if (setTrue) return item;
+            return null;
           }),
         ],
         loading: false,

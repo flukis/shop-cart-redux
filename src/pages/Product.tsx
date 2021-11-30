@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Footer from "components/Footer";
 import ProductItem from "components/ProductItem";
 import Navbar from "components/Navbar";
@@ -18,6 +18,7 @@ function AllProduct() {
   const { show, msg, type } = useTypedSelector((state) => state.toasts);
   useEffect(() => {
     dispatch(LoadProduct());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>

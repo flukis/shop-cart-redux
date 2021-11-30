@@ -11,6 +11,7 @@ export default function Toast(props: ToastInterface) {
     return () => {
       document.removeEventListener("click", handleClose, true);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const handleClose = () => {
     const toast = document.getElementById("toast");

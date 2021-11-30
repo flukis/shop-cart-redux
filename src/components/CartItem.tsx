@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { dataCartInterface } from "lib/seed";
 import { showPriceInCart } from "lib/helpers";
 import { RemoveOneItemFromCarts, EditItemInCarts } from "actions/CartAction";
@@ -21,6 +21,7 @@ function CartItem(props: dataCartInterface) {
     };
     setPrice(result);
     dispatch(EditItemInCarts(newData));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [item]);
   return (
     <div className="cart-item-wrapper">
