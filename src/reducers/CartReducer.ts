@@ -104,10 +104,9 @@ export const cartReducer = (
     case cartActionType.REMOVE_A_PRODUCT_FROM_CART:
       return {
         ...state,
-        carts: state.carts.filter((item: dataCartInterface) => {
-          if (item.itemUid !== action.payload) return item;
-          return null;
-        }),
+        carts: state.carts.filter(
+          (item: dataCartInterface) => item.itemUid !== action.payload
+        ),
       };
 
     case cartActionType.CHECKOUT_FROM_CART:

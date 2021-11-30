@@ -12,12 +12,10 @@ function FilterProductSection() {
   const [filter, setFilter] = useState<productTypes[]>(filters);
   const handleChange = (e: React.SyntheticEvent<EventTarget>) => {
     const position = (e.target as HTMLInputElement).value;
+
     if (position === "all") return setFilter(filters);
     const filteredFilter: productTypes[] = filters.filter(
-      (item: productTypes) => {
-        if (item.type === position) return item;
-        return {};
-      }
+      (item: productTypes) => item.type === position
     );
     return setFilter(filteredFilter);
   };

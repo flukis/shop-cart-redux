@@ -39,10 +39,9 @@ function UnProduct(props: dataProductInterface) {
       }, 2100);
       return;
     }
-    const result = props.InStock.filter((item) => {
-      if (item.type === (TypeLists as HTMLInputElement).value) return item;
-      return {};
-    });
+    const result = props.InStock.filter(
+      (item) => item.type === (TypeLists as HTMLInputElement).value
+    );
     (TypeLists as HTMLInputElement).checked = false;
     const ItemCart: itemInCartInterface = {
       item: 1,
