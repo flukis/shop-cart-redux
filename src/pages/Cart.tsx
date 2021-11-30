@@ -26,6 +26,7 @@ function Cart() {
         toast?.classList.remove("show");
       }, 2100);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [carts]);
   return (
     <>
