@@ -247,7 +247,7 @@
   background-color: #9333ea;
 }
 .delete-all-cart-item:hover {
-  opacity: 85%;
+  opacity: 7.5;
   transform: scale(1.1);
   transition-duration: 0.5s;
 }
