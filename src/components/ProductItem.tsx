@@ -12,6 +12,8 @@ function UnProduct(props: dataProductInterface) {
     const TypeLists: Element | null = document.querySelector(
       `input[name='type-${removeSpace(props.title)}']:checked`
     );
+    const toast = document.getElementById("toast");
+    toast?.classList.add("show");
     if (TypeLists === null) {
       const typeList = document.getElementById(`type-list-${props.uid}`);
 
@@ -48,7 +50,18 @@ function UnProduct(props: dataProductInterface) {
       remainingStock: result[0].stock,
       type: (TypeLists as HTMLInputElement).value,
     };
-    return dispatch(AddItemToCarts(props, ItemCart));
+    dispatch(AddItemToCarts(props, ItemCart));
+    setTimeout(() => {
+      const toast = document.getElementById("toast");
+      toast?.classList.remove("show");
+    }, 2100);
+    return dispatch(
+      ShowToast({
+        show: true,
+        type: "success",
+        msg: "Add one item to cart",
+      })
+    );
   };
   return (
     <div className="section-body">
