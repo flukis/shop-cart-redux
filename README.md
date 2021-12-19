@@ -2,4 +2,4 @@
 
 Menggunakan redux untuk menajemen redux, project ini sudah ditulis menggunakan typescript.
 
-Belum ada fitur yang berhubungan dengna user sehingga semua data masih bersifat local.
+Belum ada fitur yang berhubungan dengan user sehingga semua data masih bersifat local.
